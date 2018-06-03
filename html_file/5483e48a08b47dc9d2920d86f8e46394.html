@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>校史上的今天-山东大学新闻网</title>
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><link rel="stylesheet" type="text/css" href="style/style.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b7847565251544503060002 -->
+<link rel="stylesheet" type="text/css" href="xsjt.vsb.css" />
+<META Name="keywords" Content="山东大学新闻网,校史上的今天" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1019,'/xsjt.jsp',-1,1251758245)</script>
+</head>
+<body>
+<div class="bg">
+<div class="wrap">
+<div class="header"></div>
+<div><!--#begineditable name="标题列表" viewid="125362" tagname="标题列表" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp=""-->
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script>
+<script>
+
+    function getContentu0()
+	{
+		var date = $("#date").val();
+		var month = $("#month").val();
+		if(date==0 || month==0)
+		{
+			alert("请选择日期！");
+			return false;
+		}
+		var url = '/system/resource/code/schoolhistory.jsp?contentids=117447&owner=1251758245&month='+month+'&day='+date;
+		jQuery.post(
+			url,
+			function(data)
+			{
+				//判断是否查询到内容
+				if(data && data.length>0)
+				{
+					//判断dqsj是否存在
+					if(document.getElementById("dqsj"))
+					{
+						$("#dqsj").html("");
+					}else
+					{
+						$("#contentXS").append("<div class=dqsj id=dqsj></div>");
+					}
+					for(var i = data.length-1 ; i >= 0; i--)
+					{
+						var history = data[i];
+						var history_content = "<li><span>"+history.title+"</span>"+history.wbsummary+"</li>";
+						$("#dqsj").append(history_content);
+					}
+					$("#z_m").html(month);
+					$("#z_d").html(date);
+					
+				}else
+				{
+					alert("校史上的该天没有重大事件发生！");
+				}
+			},"json"
+		);
+	}
+    $(function()
+    {
+         var d = new Date();
+         var month = d.getMonth()+1;
+	 var date = d.getDate();
+         $("#z_m").html(month);
+         $("#z_d").html(date);
+	var url = '/system/resource/code/schoolhistory.jsp?contentids=117447&owner=1251758245&month='+month+'&day='+date;
+	jQuery.post(
+		url,
+		function(data)
+		{
+			//判断是否查询到内容
+			if(data && data.length>0)
+			{
+				//判断dqsj是否存在
+				if(document.getElementById("dqsj"))
+				{
+					$("#dqsj").html("");
+				}else
+				{
+					$("#contentXS").append("<div class=dqsj id=dqsj></div>");
+				}
+				for(var i = data.length-1 ; i >= 0; i--)
+				{
+					var history = data[i];
+					var history_content = "<li><span>"+history.title+"</span>"+history.wbsummary+"</li>";
+					$("#dqsj").append(history_content);
+				}
+				$("#z_m").html(month);
+				$("#z_d").html(date);
+				
+			}
+		},"json"
+	);
+    })
+</script>
+<div class="zdz">
+	<div class="zdz_title"></div>
+	<div class="zdz_time">
+		<li class="z_m" id="z_m">
+		</li>
+		<li class="z_d" id="z_d">
+		</li>
+	</div>
+	<div class="zdz_nr">
+		<p>
+			今天，是个值得铭记的日子。一个个今天，被历史翻页后无一例外地变成了昨天，又在时光末梢悄然开启着充满变数的明天。
+		</p>
+		<p>
+			校史上的今天，山东大学这所古老学府发生了什么事情？经历着怎样的波澜壮阔？蕴含着怎样的厚积薄发？闪耀着怎样的炫目光芒？我们试图通过选取最具代表性的历史事件，和大家一起聚焦过去的精彩瞬间，思忖当下，延展未来……
+		</p>
+	</div>
+</div>
+<div style="clear: both"></div>
+
+
+<div class="jrsj" id="contentXS">
+	<div class="jrsj_top">
+		<div class="jrsj_title"></div>
+
+		<div class="jrsj_time">
+			<ul>
+				<li style="margin-top: 5px">
+					按日期查看
+				</li>
+				<li>
+					<select name="month" id="month" style="margin-top: 5px">
+						<option selected value="0">
+							月份选择
+						</option>
+						<option value="1">
+							一月
+						</option>
+						<option value="2">
+							二月
+						</option>
+						<option value="3">
+							三月
+						</option>
+						<option value="4">
+							四月
+						</option>
+						<option value="5">
+							五月
+						</option>
+						<option value="6">
+							六月
+						</option>
+						<option value="7">
+							七月
+						</option>
+						<option value="8">
+							八月
+						</option>
+						<option value="9">
+							九月
+						</option>
+						<option value="10">
+							十月
+						</option>
+						<option value="11">
+							十一月
+						</option>
+						<option value="12">
+							十二月
+						</option>
+					</select>
+				</li>
+				<li>
+					<select name="date" id="date" style="margin-top: 5px">
+						<option selected value="0">
+							日 期 选 择
+						</option>
+						<option value="1">
+							一日
+						</option>
+						<option value="2">
+							二日
+						</option>
+						<option value="3">
+							三日
+						</option>
+						<option value="4">
+							四日
+						</option>
+						<option value="5">
+							五日
+						</option>
+						<option value="6">
+							六日
+						</option>
+						<option value="7">
+							七日
+						</option>
+						<option value="8">
+							八日
+						</option>
+						<option value="9">
+							九日
+						</option>
+						<option value="10">
+							十日
+						</option>
+						<option value="11">
+							十一日
+						</option>
+						<option value="12">
+							十二日
+						</option>
+						<option value="13">
+							十三日
+						</option>
+						<option value="14">
+							十四日
+						</option>
+						<option value="15">
+							十五日
+						</option>
+						<option value="16">
+							十六日
+						</option>
+						<option value="17">
+							十七日
+						</option>
+						<option value="18">
+							十八日
+						</option>
+						<option value="19">
+							十九日
+						</option>
+						<option value="20">
+							二十日
+						</option>
+						<option value="21">
+							二十一日
+						</option>
+						<option value="22">
+							二十二日
+						</option>
+						<option value="23">
+							二十三日
+						</option>
+						<option value="24">
+							二十四日
+						</option>
+						<option value="25">
+							二十五日
+						</option>
+						<option value="26">
+							二十六日
+						</option>
+						<option value="27">
+							二十七日
+						</option>
+						<option value="28">
+							二十八日
+						</option>
+						<option value="29">
+							二十九日
+						</option>
+						<option value="30">
+							三十日
+						</option>
+						<option value="31">
+							三十一日
+						</option>
+					</select>
+				</li>
+				<li>
+					<input name="" type="image" src="images/btn_ck.png" onclick="getContentu0()" />
+				</li>
+			</ul>
+
+		</div>
+	</div>
+	<!---日期选择结束-->
+</div>
+<!--#endeditable--></div>
+<div style="clear: both"></div>
+<div class="banquan">
+<p><!--#begineditable name="版权" viewid="124598" tagname="版权" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="" istemp="true"--><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>新闻中心电话：0531-88362831 0531-88369009 &nbsp;联系信箱：<a href="mailto:xwzx@sdu.edu.cn">xwzx@sdu.edu.cn</a><br />建议使用IE6.0以上浏览器和1024*768分辨率浏览本站以取得最佳浏览效果</p><!--#endeditable--> </p></div></div></div>
+
+</body></html>
